@@ -1,0 +1,68 @@
+#style1 {
+	font-family: arial;
+	color: #707070;
+	word-wrap: break-word;
+	margin-bottom: 400px;
+}
+.name {
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.heading {
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	color: #3C3C40;
+}
+.simpletext {
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.imageofme {
+	max-width: 175px;
+	max-height: 175px;
+	border-radius: 50%;
+}
+.picture {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+#navcontainer {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 50%;
+}
+
+#navlist li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 50px;
+
+}
+#positioning {
+	position: static;
+}
+
+.simpletext2 {
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	list-style-type: none;
+	list-style-position:outside;
+}
+.heading2 {
+	font-size: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	color: #3C3C40;	
+}
