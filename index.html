@@ -3,8 +3,8 @@
 	<head>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-			<script src="script.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script src="alexkangjs.js"></script>
 				<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="alexkangstyle.css">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,35 +14,37 @@
 		</title>
 	</head>
 	<body>
+
 		<div id="navcontainer">
-			<ul id="navlist">
-				<li><a href="#aboutme">About Me</a></li>
+			<ul id="navlist" class="fixedheader">
+				<li><a href="#">Top</a></li>
 				<li><a href="#skills">Skills</a></li>
 				<li><a href="#relevantcoursework">Relevant Coursework</a></li>
 				<li><a href="#projects">Projects</a></li>
+				<li><a href="#courseproject">Course Projects</a></li>
 				<li><a href="#resume">Resume</a></li>
+				<li><a href="#activities">Activities</a></li>
 				<li><a href="#contact">Contact</a></li>
+				<hr style="margin-bottom:0">
 			</ul>
 		</div>
 
-
-
 		<div id="style1">
-
+		<br>
+		<br>
 			<h1 class="picture">
-				<hr>
-				<img src="picture.jpg" class="imageofme">
+				<p onmouseover="showtext()" onmouseout="hidetext()"><img src="picture.jpg" class="imageofme"></p>
 			</h1>
 
 
 
 
-			<h3 class="heading">
-				<a id="aboutme">
-					About Me
+			<h1 class="heading">
+				<a class="anchor" id="aboutme">
 				</a>
+					About Me
 				<hr>
-			</h3>
+			</h1>
 			<p class="simpletext">
 				Hello my name is Alex Kang and I am a junior studying Computer Science and Math at UC Berkeley. I have a passion in software development, web design, and the startup culture.
 			</p>
@@ -51,56 +53,101 @@
 
 
 
-			<h4 class="heading">
-				<a id="skills">
-					Skills
+			<h1 class="heading">
+				<a class="anchor" id="skills">
 				</a>
+				Skills
 				<hr>
-			</h4>
+			</h1>
 			
 			<p class="simpletext">
-				C, Java, Python, Html, CSS, Javascript, Jquery, Ruby on Rails, MIPS
+				C, Java, Python, Html, CSS, Javascript/Jquery, Ruby on Rails, MIPS
 			</p>
 			<br>
 
-			<h4 class="heading">
-				<a id="projects">
-					Projects
+			<h1 class="heading">
+				<a class="anchor" id="projects">
 				</a>
+				Projects
 				<hr>
-			</h4>
+			</h1>
 
-			<p class="simpletext">
-			This Website!
-			</p>
-			<p class="simpletext">
-			AngelHack Hackathon
-			</p>
+			<ul class="simpletext">
+			<li>This Website!</li>
+			<li>AngelHack Hackathon</li>
+			<li>I</li>
+			<li>NEED</li>
+			<li>MORE</li>
+			<li>PROJECTS</li>
+			</ul>
+
 			<br>
 
-			<h4 class="heading">
-				<a id="relevantcoursework">
-					Relevant Coursework
+			<h1 class="heading">
+				<a class="anchor" id="relevantcoursework">
 				</a>
+				<p class="headingcolor">Relevant Coursework</p>
 				<hr>
-			</h4>
+			</h1>
 
-			<p class="simpletext">CS188 (Artificial Intelligence)</p>
-			<p class="simpletext">CS168 (Internet Architecture)</p>
-			<p class="simpletext">CS61A (Python)</p>
-			<p class="simpletext">CS61B (Java, Data Structures)</p>
-			<p class="simpletext">CS61C (C, MIPS, Machine Architecture)</p>
-			<p class="simpletext">CS70 (Discrete Math and Probabilities)</p>
-			<p class="simpletext">Math 128a (Numerical Analysis)</p>
+			<ul class="simpletext">
+			<li>CS188 (Artificial Intelligence)</li>
+			<li>CS168 (Internet Architecture)</li>
+			<li>CS61A (Python)</li>
+			<li>CS61B (Java, Data Structures)</li>
+			<li>CS61C (C, MIPS, Machine Architecture)</li>
+			<li>CS70 (Discrete Math and Probabilities)</li>
+			<li>Math 128a (Numerical Analysis)</li>
+			</ul>
+
 			<br>
 
-			<h6 class="heading">
-				<a id="resume">
-					Resume
-				</a>
 
+			<h1 class="heading">
+			<a class="anchor" id="courseproject"></a>
+			Course Projects
 			<hr>
-			</h6>
+			</h1>
+			<ul class="simpletext">
+			<li>0</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>a</li>
+			<li>b</li>
+			<li>CPU Design</li>
+			</ul>
+			<br>
+
+			<h1 class="heading">
+				<a class="anchor" id="activities">
+				</a>
+				Activities
+			<hr>
+			</h1>
+			<ul class="simpletext">
+			<li>0</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			</ul>
+			<br>
+
+
+			<h1 class="heading">
+				<a class="anchor" id="resume">
+				</a>
+				Resume
+			<hr>
+			</h1>
 
 			<p class="simpletext">
 				<a href="#">
@@ -109,26 +156,31 @@
 			</p>
 			<br>
 
-			<h5 class="heading">
-				<a id="contact">
-					Contact
+			<h1 class="heading">
+				<a class="anchor" id="contact">
 				</a>
+				Contact
 			<hr>
-			</h5>
-
-			<p class="simpletext">
+			</h1>
+			<ul class="simpletext">
+			<li>
 				<a href="http://www.facebook.com/jerrybharrison">
 					Facebook
 				</a>
-			</p>
-			<p class="simpletext">
+			</li>
+			<li>
 				<a href="https://github.com/asork42">
 					Github
 				</a>
-			</p>
-			<p class="simpletext">
+			</li>
+			<li>
+				<a href="mailto:asork42@berkeley.edu">
 				asork42@berkeley.edu
-			</p>
+				</a>
+			</li>
 		</div>
+		<br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br>
+		<br><br><br>
 	</body>
 </html>

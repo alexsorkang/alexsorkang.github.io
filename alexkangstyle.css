@@ -3,6 +3,7 @@
 	color: #707070;
 	word-wrap: break-word;
 	margin-bottom: 400px;
+	padding-left: 0px;
 }
 .name {
 	font-size: 30px;
@@ -10,13 +11,22 @@
 	margin-right: auto;
 	width: 50%;
 }
+a.anchor {
+	display: block; 
+	position: relative; 
+	top: -60px; 
+	visibility: hidden;
+}
+
 .heading {
 	font-size: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-	color: #3C3C40;
+	color: #538DE6;
 }
+
+
 .simpletext {
 	font-size: 20px;
 	margin-left: auto;
@@ -33,36 +43,35 @@
 	margin-right: auto;
 	width: 50%;
 }
-
-#navcontainer {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
+.fixedheader {
+	position: fixed;
 	width: 50%;
+	top: 0px;
+	padding-left: 0px;
+	background-color: white;
+}
+#navcontainer {
+	margin: 0px auto;
+	width: 50%;
+	background-color: black;
 }
 
 #navlist li {
 	display: inline;
 	list-style-type: none;
-	padding-right: 50px;
-
-}
-#positioning {
-	position: static;
+	padding-right: 35px;
+	text-align: left;
 }
 
-.simpletext2 {
-	font-size: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-	list-style-type: none;
-	list-style-position:outside;
-}
 .heading2 {
 	font-size: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
 	color: #3C3C40;	
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
 }
