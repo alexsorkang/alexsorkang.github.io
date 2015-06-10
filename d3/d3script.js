@@ -1,4 +1,10 @@
 // var bardata = [200,250,150,275, 175];
+var text = ['textone', 'texttwo','textthree','four','five','six','seven']
+d3.selectall('.item')
+	.data(text)
+	.on('click', function(d){
+		return d
+	})
 
 
 // d3.select('#chart')

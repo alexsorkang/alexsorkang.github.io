@@ -6,6 +6,15 @@
 	<title>learning d3</title>
 	<link rel="stylesheet" href="d3/base.css">
 	<link rel="stylesheet" href="d3/d3style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<script> 
+		$(document).ready(function(){
+  			$(".item").click(function(){
+    			$(this).next(".detail").toggle("fast");
+  				});
+			}); 
+	</script>
 </head>
 <body>
 
@@ -14,12 +23,78 @@
 	<h6> Software Engineer</h6>
 	<section id="chart">
 		<div class="item"> About me </div>
+			<p class="detail" style="display:none">
+			My name is Alex Kang and I am a senior studying Computer Science and Applied Mathematics at UC Berkeley. My interests lie in software engineering and both front and backend of web development.
+			</p>
 		<div class="item"> Skills </div>
+			<ol class="detail" style="display:none">
+			<li>Javascript(Node, Jquery, D3)</li>
+			<li>Python</li>
+			<li>C</li>
+			<li>Java</li>
+			<li>web markup(HTML/CSS)</li>
+			</ol>
 		<div class="item"> UCSF Douglas Lab </div>
+			<p class="detail" style="display:none">
+				Basically making a virtual lab. MEAN Stack (mongo, express, angular, node). Made microservices. using google's API and deploying APIs. Unity graphics engine (virtual reality, and 2d development).
+				<br>
+				For more information about the project, go here (currently unavailable).
+				<br>
+				For more information about the lab, go <a href="http://bionano.ucsf.edu/">here</a>.
+			</p>
 		<div class="item"> Courses </div>
+			<ol class="detail" style="display:none">
+				<li>Algorithms</li>
+				<li>Artificial Intelligence</li>
+				<li>Networks and Internet Architecture</li>
+				<li>Data Structures</li>
+				<li>Machine Architecture</li>
+				<li>Discrete Math and Propability</li>
+				<li>Linear Algebra</li>
+				<li>Numerical Analysis</li>
+				<li>Real Analysis</li>
+			</ol>
 		<div class="item"> Projects </div>
+			<ol class="detail" style="display:none">
+				<li><strong>CONTACT ME FOR CODE</strong></li>
+				<li>Traveling Salesman Problem Approximation (TSP)</li>
+				<li>Image Parser (Parallelism)</li>
+				<li>Pacman (Artificial Intelligence)</li>
+				<li>Engima (Data Structures)</li>
+				<li>Connect Four (Mapreduce)</li>
+				<li>Twitter Trends (Python)</li>
+				<li>Jump64 board game (data structures and AI)</li>
+				<li>CPU Design (Logism)</li>
+				<li>Routing (Networks)</li>
+				<li>Simplified TCP (Networks)</li>
+				<li>Firewall (Networks)</li>
+				<li>Ants vs. Bees (Plants vs. Zombies Clone)</li>
+				<li>Scheme Interpreter (Python)</li>
+			</ol>
 		<div class="item"> Resume </div>
+			<p class="detail" style="display:none">
+				download my resume (currently unavailable)
+			</p>
 		<div class="item"> Contact </div>
+			<ol class="detail" style="display:none">
+				<li>
+					<a href="http://www.facebook.com/jerrybharrison">
+					Facebook
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/alexsorkang">
+						Github
+					</a>
+				</li>
+				<li>
+					<a href="mailto:asork42@berkeley.edu">
+					asork42@berkeley.edu
+					</a>
+				</li>
+			</ol>
+
+
 	</section>
 	</div>
 
