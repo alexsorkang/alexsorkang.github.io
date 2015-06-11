@@ -1,32 +1,71 @@
 // var bardata = [200,250,150,275, 175];
-var text = ['textone', 'texttwo','textthree','four','five','six','seven']
-d3.selectall('.item')
-	.data(text)
-	.on('click', function(d){
-		return d
+var bardata = [];
+datasize = 1000;
+for (var i = 0;i<datasize;i++) {
+	bardata.push(Math.random()*1000)
+}
+
+var height = 300,
+	width = 300;
+
+// this makes the largest element the maximum
+var yscale = d3.scale.linear()
+		.domain([0, d3.max(bardata)])
+		.range([0, height])
+
+// creates bands relative to the size of data
+var xscale = d3.scale.ordinal()
+		.domain(d3.range(0,bardata.length))
+		.rangeBands([0,width])
+
+var colors = d3.scale.linear()
+		.domain([0, bardata.length*.33,bardata.length*.66,bardata.length])
+		.range(['#B58929','#C61C6F','#268BD2','#85992C'])
+
+var bargraph = d3.select('#bargraph')
+	.insert('svg')
+		.attr('width', width)
+		.attr('height', height)
+	.selectAll('svg').data(bardata)
+		.enter().append('rect')
+			.style('fill', function(d,i) {
+				return colors(i);
+			})
+			.attr('width', xscale.rangeBand())
+			.attr('height', 0)
+			.attr('x', function(d,i) {
+				return xscale(i)
+			})
+			.attr('y', height)
+	.on('mouseover', function(d) {
+		tooltip.transition()
+			.style('opacity', .9)
+		tooltip.html(d)
+		d3.select(this)
+			.style('opacity', .5)
+	})
+	.on('mouseout', function(d) {
+		d3.select(this)
+			.style('opacity', 1)
+	})
+
+var tooltip = d3.select('#bargraph').insert('div')
+		.style('position', 'absolute')
+		.style('opacity', 0)
+
+bargraph.transition()
+	.attr('height', function(d) {
+		return yscale(d)
+	})
+	.attr('y', function(d) {
+		return height - yscale(d)
+	})
+	.delay(function(d,i) {
+		return i*.2
 	})
 
 
-// d3.select('#chart')
-// 	.append('svg')
-// 		.attr('width', 300)
-// 		.attr('height', 300)
-// 		.style('background', '#dc322f')
-// 	.selectAll('svg').data(bardata)
-// 		.enter().append('rect')
-// 			.style('fill', '#fdf6e3')
-// 			.attr('width', 50)
-// 			.attr('height', function(d){
-// 				return d;
-// 			})
-// 			.attr('x', function(d,i) {
-// 				return 8+(8+50)*i
-// 			})
-// 			.attr('y', function(d){
-// 				return 300-d
-// 			})
-		
-	// 	<svg width="300" height="300" style="background: #dc322f">
-	// 	<circle cx="150" cy="150" r="50" style="fill: #fdf6e3" />
-	// 	<text x="10" y="50" font-family="Roboto Condensed" fill="#fdf6e3">what</text> 
-	// </svg>
+
+
+
+

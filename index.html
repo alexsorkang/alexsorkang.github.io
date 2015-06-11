@@ -14,12 +14,19 @@
     			$(this).next(".detail").toggle("fast");
   				});
 			}); 
+
+		$(document).ready(function(){
+  			$(".d3title").click(function(){
+    			$(this).next(".d3project").toggle("fast");
+  				});
+			}); 
 	</script>
+
 </head>
 <body>
 
 	<div class="container">
-	<h1> Alex Sor Kang </h1>
+	<h1>Alex Sor Kang</h1>
 	<h6> Software Engineer</h6>
 	<section id="chart">
 		<div class="item"> About me </div>
@@ -37,6 +44,7 @@
 		<div class="item"> UCSF Douglas Lab </div>
 			<p class="detail" style="display:none">
 				Basically making a virtual lab. MEAN Stack (mongo, express, angular, node). Made microservices. using google's API and deploying APIs. Unity graphics engine (virtual reality, and 2d development).
+				<br>
 				<br>
 				For more information about the project, go here (currently unavailable).
 				<br>
@@ -94,7 +102,13 @@
 				</li>
 			</ol>
 
-
+		<div class="item">Watch my progress as I learn D3!
+		</div>
+			<ol class="detail">
+				<p class="d3title">Project One: First Bar graph</p>
+				<li class="d3project"><div id='bargraph'></div><br></li>
+				<li>Project Two: Heatmap Calendar<div id='calendar'></div></li>
+			</ol>
 	</section>
 	</div>
 
