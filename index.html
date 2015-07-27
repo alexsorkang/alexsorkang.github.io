@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Alex Sor Kang</title>
   <link rel="stylesheet" href="public/base.css">
-  <link rel="stylesheet" href="public/d3style.css">
-  <link rel="stylesheet" href="public/cal-heatmap.css">
+  <!-- <link rel="stylesheet" href="public/cal-heatmap.css"> -->
+  <link rel="stylesheet" href="public/popup.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
   <script>
@@ -16,11 +16,11 @@
         });
       });
 
-    $(document).ready(function(){
-      $(".d3title").click(function(){
-        $(this).next(".d3project").toggle("fast");
-        });
-      });
+    // $(document).ready(function(){
+    //   $(".d3title").click(function(){
+    //     $(this).next(".d3project").toggle("fast");
+    //     });
+    //   });
   </script>
 
 </head>
@@ -32,7 +32,7 @@
   <section id="chart">
     <div class="item"> About me </div>
       <p class="detail" style="display:none">
-      My name is Alex Kang and I am a senior studying Computer Science and Applied Mathematics at UC Berkeley. My interests lie in software engineering and both front and backend of web development. I have a particular interest in algorithms.
+      My name is Alex Kang and I am a senior studying Computer Science and Applied Mathematics at UC Berkeley. My interests lie in software engineering and both front and backend of web development. I also have an interest in efficient algorithms.
       </p>
     <div class="item"> Skills </div>
       <ol class="detail" style="display:none">
@@ -82,9 +82,10 @@
         <li>Scheme Interpreter (Python)</li>
       </ol>
     <div class="item"> Resume </div>
-      <p class="detail" style="display:none">
-        download my resume (currently unavailable)
-      </p>
+      <!-- <a href="https://www.google.com/" class="popup1"> -->
+      <!-- <a href="#" class="detail" style="display:none" class="popup1"> -->
+        <a href="kang_alex_resume.pdf" class="detail" style="display:none">download my resume</a>
+      <!-- </a> -->
     <div class="item"> Contact </div>
       <ol class="detail" style="display:none">
         <li>
@@ -103,10 +104,9 @@
           </a>
         </li>
       </ol>
-
+<!--
     <div class="item">Watch my progress as I learn D3!</div>
       <ol class="detail" style="display:none">
-      <!-- <ol class="detail"> -->
         <p class="d3title">Project One: First Bar graph</p>
         <li class="d3project">
           <div id='bargraph'></div><br>
@@ -116,13 +116,17 @@
           <div id='cal-heatmap'></div>
         </li>
       </ol>
+-->
   </section>
   </div>
-
+<!--
   <script src="public/d3.min.js"></script>
   <script src="public/d3script.js"></script>
+ -->
   <script src="public/cal-heatmap.js"></script>
   <script src="public/calendar.js"></script>
+  <script src="public/jquery.popup.min.js"></script>
+  <script src="public/mypopups.js"></script>
 
 </body>
 
