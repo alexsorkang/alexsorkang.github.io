@@ -112,6 +112,21 @@ p {
     margin-top: 10px;
 }
 
+.container2 {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-right: 70%;
+}
+.container3 {
+    float: right;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
 @media all an (max-width:500px) {
     h2 {
         padding-left:10px;
