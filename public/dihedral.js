@@ -27,6 +27,7 @@ var dihedgraph = {'nodes':dihednodes, 'links':dihedlinks};
 var svg = d3.select('#dihedral').append('svg')
     .attr('width', width)
     .attr('height', height)
+    .attr("style", "outline: thin solid black;");
 
 
 // build the directed arrow.

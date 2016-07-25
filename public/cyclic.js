@@ -1,5 +1,6 @@
 // this is for the cyclic group
-n = 20;
+
+n = 15;
 var cyclicnodes = [];
 for (var i = 0;i<n;i+=1){
   cyclicnodes.push({x: Math.sin(i/n*2*Math.PI) * width/3, y: Math.cos(i/n*2*Math.PI) * width/3, name:"r"+i}); 
@@ -16,7 +17,7 @@ var cyclicgraph = {'nodes':cyclicnodes, 'links':cycliclinks};
 var svg = d3.select('#cyclic').append('svg')
     .attr('width', width)
     .attr('height', height)
-
+    .attr("style", "outline: thin solid black;");
 
 // build the directed arrow.
 // define arrow markers for graph links
@@ -44,13 +45,9 @@ svg.append('svg:defs').append('svg:marker')
     .attr('fill', '#FFA500');
 
 
-
-
-
 var cyclicsimulation = d3.forceSimulation()
     .force("link", d3.forceLink().distance(50))
     .force("charge", d3.forceManyBody().distanceMin(width/5))
-      // .distanceMin(10)
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 
@@ -59,7 +56,6 @@ var cycliclink = svg.append("g")
     .selectAll("line")
     .data(cyclicgraph.links)
     .enter().append("line")
-    // .enter().append("polyline")
     .attr("marker-end", function(d) { return d.right ? "url(#end-arrow)" : '';})
     .attr("marker-start", function(d) { return d.left ? "url(#start-arrow)" : '';});
 
@@ -87,7 +83,6 @@ cyclicsimulation
 
 cyclicsimulation.force("link")
     .links(cyclicgraph.links);
-
 
 function ticked() {
   // this makes the arrows and the link distances look better
