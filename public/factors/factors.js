@@ -2,13 +2,27 @@ var width = 1000, height = 1000;
 
 // prime factorization algorithm iterative
 var factors = [], num = 10254;
-        
-for (var i = 2; i <= num; i+=1) {
-    while ((num % i) === 0) {
-        factors.push(i);
-        num /= i;
-    }
+var tree = {};
+// for (var i = 2; i <= num; i+=1) {
+//     tree.name = num.toString();
+//     while ((num % i) === 0) {
+//         var child = {};
+//         factors.push(i);
+//         num /= i;
+//     }
+// }
+tree.name=num.toString();
+var child1 = [], child2 = [];
+for (var i = 2; i <= num; i+= 1){
+  if (num%i == 0) {
+    child1.push({"name":i.toString()})
+    child2.push({"name":i.toString()})
+  }
+  num /= i;
 }
+tree.children = child
+console.log(tree)
+// console.log(factors)
 // 2*2*2*(3*3)*(3*5)
 var treedata = 
   {
@@ -60,7 +74,7 @@ var g = svg.append("g")
 
 
 var data = d3.hierarchy(treedata);
-console.log(data)
+// console.log(data)
 // console.log(data.data)
 // console.log(data.name)
 

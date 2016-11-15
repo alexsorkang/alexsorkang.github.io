@@ -1,13 +1,14 @@
 // now we try dihedral group (of the form (x,y|x^n = e, y^2 = e, (xy)^2 = e))
 // order 2*n
 var n = 10;
-
+var distance = n*7;
+// var distance = 35
 var dihednodes = [];
 for (var i = 0; i<n; i+=1) {
-  dihednodes.push({x: Math.sin(i/n*2*Math.PI) * width/3, y: Math.cos(i/n*2*Math.PI) * width/3, name:"r"+i});
+  dihednodes.push({x: Math.sin(i/n*2*Math.PI) * width/(n/3), y: Math.cos(i/n*2*Math.PI) * width/(n/3), name:"r"+i});
 }
 for (var i = 0; i<n; i+=1) {
-  dihednodes.push({x: Math.sin(i/n*2*Math.PI) * width/6, y: Math.cos(i/n*2*Math.PI) * width/6, name:"s"+i});
+  dihednodes.push({x: Math.sin(i/n*2*Math.PI) * width/(2*n/3), y: Math.cos(i/n*2*Math.PI) * width/(2*n/3), name:"s"+i});
 }
 var dihedlinks = []
 for (var i = 0;i<n;i+=1){
@@ -15,7 +16,7 @@ for (var i = 0;i<n;i+=1){
   dihedlinks.push({source:dihednodes[i], target:dihednodes[i+n], left: true, right: true});
 
 };
-for (var i = 10;i<2*n;i+=1){
+for (var i = n;i<2*n;i+=1){
   dihedlinks.push({source:dihednodes[i%n + n], target:dihednodes[(i+1)%n + n], left: true, right: false})
 };
 
@@ -54,9 +55,12 @@ svg.append('svg:defs').append('svg:marker')
     .attr('d', 'M10,-5L0,0L10,5')
     .attr('fill', '#FFA500');
 
+
+// forcedistance
 var dihedsimulation = d3.forceSimulation()
-    .force("link", d3.forceLink().distance(80))
-    .force("charge", d3.forceManyBody().distanceMin(width/5))
+    .force("link", d3.forceLink().distance(distance))
+    .force("charge", d3.forceManyBody())
+    // .distanceMin(width/5))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 
