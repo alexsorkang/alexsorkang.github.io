@@ -21,31 +21,51 @@
     <div class="row">
       <div class="col-md-9">
       <a id="one"></a>
+      <h2>Introduction</h2>
       <p>
-        <!-- https://facebook.github.io/react-native/docs/getting-started.html#content -->
-      
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie condimentum imperdiet. Proin porta consectetur nunc, et tempus turpis bibendum at. Pellentesque blandit libero quis bibendum scelerisque. Aliquam ultricies, velit id luctus ultrices, mauris lacus fermentum neque, luctus semper lacus dui sit amet est. Nam laoreet mauris orci, at egestas eros commodo eget. Vivamus volutpat lacus nec tortor consectetur, quis vehicula lorem ultrices. Nullam dui quam, ultrices sed aliquet nec, cursus aliquet dui.
-
-      <pre>
+      React Native is a framework developed by Facebook that allows you to build mobile apps using javascript. Traditionally, mobile developers learn android and ios development separately. React Native, however, allows you to use the same code for both platforms which makes this worth looking into.
+      </p>
+      <p>
+      This guide will show you how to create a simple React Native app as shown below...
+      </p>
+<!--       <pre>
         <code>
         &lt;p&gt;Sample text here...&lt;/p&gt;
         &lt;p&gt;And another line of sample text here...&lt;/p&gt;
         </code>
       </pre>
-
+      <p>
       To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
       To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie condimentum imperdiet. Proin porta consectetur nunc, et tempus turpis bibendum at. Pellentesque blandit libero quis bibendum scelerisque. Aliquam ultricies, velit id luctus ultrices, mauris lacus fermentum neque, luctus semper lacus dui sit amet est. Nam laoreet mauris orci, at egestas eros commodo eget. Vivamus volutpat lacus nec tortor consectetur, quis vehicula lorem ultrices. Nullam dui quam, ultrices sed aliquet nec, cursus aliquet dui.
       </p>
+ -->
+      <a id="start"></a>
+      <h2>Getting Started</h2>
+      <p>Start off by installing React Native and the tools required to get started. The official documentation does a good enough job of how to do this so <a href="https://facebook.github.io/react-native/docs/getting-started.html#content" target="_blank">follow their guide</a></p>
+      <p>Note that this is currently only compatible if you are developing using a MacOS</p>
+      <p>Now once you are done installing node and watchman and then react-native-cli using npm, the guide instructs you to type the following lines into your terminal...</p>
 
-      <a id="two"></a>
       <p>
-      Suspendisse euismod a eros id ornare. Phasellus vitae dui eros. Morbi imperdiet lorem a elit mattis, in gravida dolor iaculis. Donec aliquet ullamcorper enim, et consequat nibh tincidunt non. Sed ultrices et massa non tincidunt. Quisque condimentum consequat venenatis. Nulla vestibulum laoreet elit, sed consequat libero efficitur nec. Nulla ultrices faucibus ante a finibus. Sed iaculis, enim id dignissim congue, mi eros porta orci, non dapibus sem magna at lacus. Sed gravida et arcu eu eleifend. Cras dolor tellus, semper ut velit id, aliquet euismod massa. Phasellus iaculis iaculis mi, a dignissim turpis. Etiam bibendum nisl vel rhoncus feugiat. Curabitur gravida nisl sed ex lobortis blandit. Aenean efficitur sem id tincidunt pharetra. Donec efficitur odio ut sodales pulvinar.
-
-      Curabitur consectetur turpis tristique convallis pretium. In ultrices nulla at turpis pretium, ut dignissim ipsum volutpat. Maecenas cursus neque urna, vel fringilla ex auctor blandit. Donec bibendum accumsan consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget consequat magna. Vestibulum at tempus ex, pharetra venenatis arcu. Nulla pulvinar leo bibendum eros placerat tempor. Maecenas nec lacus ut massa ultricies varius. Aliquam et ligula vel odio ultrices suscipit id mattis ligula. In at tincidunt nunc. Mauris placerat condimentum enim eget aliquet. Mauris vitae iaculis lectus. Nunc eget congue ligula. Maecenas varius risus dolor.
+      <kbd>
+      react-native init AwesomeProject
+      </kbd> - this creates the project<br>
+      <kbd>
+      cd AwesomeProject
+      </kbd> - change directory to the newly created project<br>
+      <kbd>
+      react-native run-ios
+      </kbd> - runs the app with an ios simulator<br>
+      <p>or if you prefer to use an android simulator...</p>
+      <kbd>
+      react-native run-android
+      </kbd> - this requires more setup as described in the official documentation
       </p>
-      <a id="three"></a>
+      <p>
+      Now you are ready to start coding!
+      </p>
+      <a id="navigator"></a>
+      <h2>Navigator</h2>
       <p>
       Sed convallis elementum aliquam. Donec id ultrices lectus, non luctus velit. Praesent eu ultricies sem, ac pharetra est. Vivamus sed imperdiet metus. Vestibulum eget sem eu libero sodales efficitur. Morbi ac turpis diam. Morbi tristique est iaculis eros semper pharetra. Suspendisse facilisis neque a orci lacinia ultricies. Morbi pharetra a enim at faucibus. Praesent maximus magna justo, feugiat luctus ex pellentesque ac. Fusce vel ultrices ante. Maecenas viverra eros sit amet luctus fringilla. Suspendisse commodo congue ligula vel lacinia. Sed tincidunt nisi quis urna cursus finibus.
 
@@ -61,13 +81,13 @@
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Introduction</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#two">Features</a>
+                <a class="nav-link" href="#start">Getting started</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#three">Pricing</a>
+                <a class="nav-link" href="#navigator">Navigator</a>
               </li>
 <!--               <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
