@@ -1,0 +1,12 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	margin-top: 200px;
+}
+
+.fixed {
+	position: fixed;
+}
