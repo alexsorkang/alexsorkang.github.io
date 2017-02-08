@@ -10,3 +10,7 @@ body {
 .fixed {
 	position: fixed;
 }
+
+.phone {
+	width: 40%;
+}

@@ -28,6 +28,7 @@
       <p>
       This guide will show you how to create a simple React Native app as shown below...
       </p>
+      <p>I will also be documenting all the problems or bugs that I run into at the end of each section</p>
 <!--       <pre>
         <code>
         &lt;p&gt;Sample text here...&lt;/p&gt;
@@ -43,12 +44,12 @@
       <a id="start"></a>
       <h2>Getting Started</h2>
       <p>Start off by installing React Native and the tools required to get started. The official documentation does a good enough job of how to do this so <a href="https://facebook.github.io/react-native/docs/getting-started.html#content" target="_blank">follow their guide</a></p>
-      <p>Note that this is currently only compatible if you are developing using a MacOS</p>
+      <p>Note: This is currently only compatible if you are developing using a MacOS</p>
       <p>Now once you are done installing node and watchman and then react-native-cli using npm, the guide instructs you to type the following lines into your terminal...</p>
 
       <p>
       <kbd>
-      react-native init AwesomeProject
+      react-native init ProjectName
       </kbd> - this creates the project<br>
       <kbd>
       cd AwesomeProject
@@ -61,9 +62,19 @@
       react-native run-android
       </kbd> - this requires more setup as described in the official documentation
       </p>
-      <p>
-      Now you are ready to start coding!
-      </p>
+      <p>We will be using the ios simulator for this tutorial</p>
+      <p>Note: when you run <kbd>react-native run-ios</kbd> for the first time, expect to wait for a couple minutes as it does its initial setup</p>
+      
+      <p>once it finished setting up, you should see the this:<br><img class="phone" src="img/freshinstall.png"></p>
+
+      <p>Now you are ready to start coding!</p>
+      <h5>bugs</h5>
+      <ol>
+      <li>When I ran <kbd>react-native run-ios</kbd>, the build succeeded but was stuck at around <br><kbd>Installing build/Build/Products/Debug-iphonesimulator/reactnativetut.app</kbd><br>
+      This was fixed when I canceled the process by quitting the simulator and rerunning <br><kbd>react-native run-ios</kbd>
+      </li>
+      <li>once did the above fix, the simulator ran but I got the "react native application not registered" error. This is caused by multiple instances of the "react packager". All you have to do is make sure you exit the "react packager" terminal instance when you quit the simulator</li>
+      </ol>
       <a id="navigator"></a>
       <h2>Navigator</h2>
       <p>
